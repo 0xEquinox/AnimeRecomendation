@@ -1,5 +1,6 @@
 import java.awt.image.AreaAveragingScaleFilter;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class AnimeShow {
 
@@ -9,6 +10,7 @@ public class AnimeShow {
     private int popularity = 0;
     private float score = 0;
     private int episodes = 0;
+    private int numberInCommon = 0;
 
 
     public AnimeShow(String title, int popularity, float score, int episodes, String[] genre) {
@@ -41,9 +43,17 @@ public class AnimeShow {
         return episodes;
     }
 
+    public int getNumberInCommon() {
+        return numberInCommon;
+    }
+
+    public void setNumberInCommon(int numberInCommon) {
+        this.numberInCommon = numberInCommon;
+    }
+
 
     public String toString() {
-        return "AnimeShow{" + "title=" + title + ", genre=" + genre + ", popularity=" + popularity + ", score=" + score + ", episodes=" + episodes + '}';
+        return "AnimeShow{" + "title=" + title + ", genre=" + Arrays.toString(genre) + ", popularity=" + popularity + ", score=" + score + ", episodes=" + episodes + ", common=" + numberInCommon + '}';
     }
 
 

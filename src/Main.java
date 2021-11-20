@@ -27,12 +27,12 @@ public class Main {
         }
 
 
-        RecommendationAlgorithm recommendationAlgorithm = new RecommendationAlgorithm(new User(new String[]{"Action", "Slice of Life"}, User.Length.SHORT, 10), animeShows);
+        RecommendationAlgorithm recommendationAlgorithm = new RecommendationAlgorithm(new User(new String[]{"Adventure", "Drama", "Comedy", "SliceofLife"}, User.Length.SHORT, 10), animeShows);
 
 
         recommendationAlgorithm.getRecommendations();
 
-        recommendationAlgorithm.getUser().printRecomendations();
+        //recommendationAlgorithm.getUser().printRecomendations();
 
 
     }
