@@ -43,5 +43,11 @@ public class User {
         }
     }
 
+    public void swapRecomendations(int newRecomendations, int oldRecomendations) {
+        AnimeShow tmp = recomendations.get(oldRecomendations);
+        recomendations.set(oldRecomendations, recomendations.get(newRecomendations));
+        recomendations.set(newRecomendations, tmp);
+    }
+
 
 }

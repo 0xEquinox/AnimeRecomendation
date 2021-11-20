@@ -27,7 +27,8 @@ public class Main {
         }
 
 
-        RecommendationAlgorithm recommendationAlgorithm = new RecommendationAlgorithm(new User(new String[]{"Magic"}, User.Length.SHORT, 10), animeShows);
+        RecommendationAlgorithm recommendationAlgorithm = new RecommendationAlgorithm(new User(new String[]{"Action", "Slice of Life"}, User.Length.SHORT, 10), animeShows);
+
 
         recommendationAlgorithm.getRecommendations();
 
