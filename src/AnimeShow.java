@@ -31,10 +31,6 @@ public class AnimeShow {
         return genre;
     }
 
-    public int getPopularity() {
-        return popularity;
-    }
-
     public float getScore() {
         return score;
     }

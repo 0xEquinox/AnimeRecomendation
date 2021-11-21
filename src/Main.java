@@ -18,7 +18,6 @@ public class Main {
             for (int i = 0; (line = br.readLine()) != null; i++) {
                 if(i != 0) {
                     animeShows.add(generateAnimeShow(line.split(",")));
-                    //System.out.println(i + ": "+ animeShows.get(i - 1).toString());
                 }
             }
 
@@ -27,13 +26,11 @@ public class Main {
         }
 
 
-        RecommendationAlgorithm recommendationAlgorithm = new RecommendationAlgorithm(new User(new String[]{"Adventure", "Drama", "Comedy", "SliceofLife"}, User.Length.SHORT, 10), animeShows);
-
+        RecommendationAlgorithm recommendationAlgorithm = new RecommendationAlgorithm(new User(new String[]{"Adventure", "Drama", "Comedy", "SliceofLife"}, 10), animeShows);
 
         recommendationAlgorithm.getRecommendations();
 
-        //recommendationAlgorithm.getUser().printRecomendations();
-
+        recommendationAlgorithm.getUser().printRecomendations();
 
     }
 
@@ -52,7 +49,7 @@ public class Main {
         if(line[6].equals(""))
             line[6] = "0";
 
-        return new AnimeShow(line[1], Integer.parseInt(line[6]), Float.parseFloat(line[5]), Integer.parseInt(line[4]), line[2].substring(0, line[2].length() - 1).split("\\|"));
+        return new AnimeShow(line[1], Integer.parseInt(line[6]), Float.parseFloat(line[5]), Integer.parseInt(line[4]), line[2].substring(0, line[2].length()).split("\\|"));
 
     }
 
