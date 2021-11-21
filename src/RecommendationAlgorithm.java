@@ -44,6 +44,21 @@ public class RecommendationAlgorithm {
             user.setRecomendations(temp);
         }
 
+        //Sort the list of recomendations by most common genre using a selection sort
+        for (int i = 0; i < user.getRecomendations().size() - 1; i++) {
+
+            int min_idx = i;
+
+            for (int j = i + 1; j < user.getRecomendations().size(); j++)
+                if (user.getRecomendations().get(j).getNumberInCommon() > user.getRecomendations().get(min_idx).getNumberInCommon())
+                    min_idx = j;
+
+
+            AnimeShow temp = user.getRecomendations().get(min_idx);
+            user.getRecomendations().set(min_idx, user.getRecomendations().get(i));
+            user.getRecomendations().set(i, temp);
+        }
+
     }
 
     private void findCommonGenres() {
