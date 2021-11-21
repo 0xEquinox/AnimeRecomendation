@@ -25,13 +25,6 @@ public class Main {
             ex.printStackTrace();
         }
 
-
-        RecommendationAlgorithm recommendationAlgorithm = new RecommendationAlgorithm(new User(new String[]{"Adventure", "Drama", "Comedy", "SliceofLife"}, 10), animeShows);
-
-        recommendationAlgorithm.getRecommendations();
-
-        recommendationAlgorithm.getUser().printRecomendations();
-
     }
 
 
